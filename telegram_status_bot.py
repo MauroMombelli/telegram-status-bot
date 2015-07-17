@@ -31,7 +31,7 @@ def send_keep_alive():
 		send_message("Buongiorno! Uptime: "+str(psutil.boot_time()), chat_id )
 
 def send_status(chat_id):
-	message = ''
+	message = 'UPTIME:\n'+str(psutil.boot_time())
 	message += "CPU:\n"+str(psutil.cpu_times_percent()) +'\n'
 	message +=  "RAM:\n"+str(psutil.virtual_memory()) +'\n'
 	message +=  'DISK:\n'
