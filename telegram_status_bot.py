@@ -80,7 +80,8 @@ print ( set_web_hook('lampone.mooo.com', random_str, 8443) )
 #self signed cert are NOT supported
 #unset_web_hook()
 
-send_message('bot avviato', chat_id_list[0])
+for chat_id in chat_id_list:
+	send_message('bot avviato', chat_id)
 
 schedule.every().day.at("9:30").do( send_keep_alive )
 
